@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-ExtraLight.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ttinterface";
+  src: url("../fonts/TTInterfaces-SemiBold.ttf");
+  font-weight: 600;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  background: #FCFCFC;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
