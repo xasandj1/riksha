@@ -4,7 +4,7 @@ import { images } from "../constants";
 
 const News = () => {
   return (
-    <section className="mt-[40px]">
+    <section className="mt-[40px] hidden">
       <div className="container">
         <div className="py-[24px] ">
           <div className="flex items-baseline">

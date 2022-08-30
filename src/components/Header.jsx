@@ -27,15 +27,20 @@ const cards = [
 
 const Header = () => {
   return (
-    <header className="h-[780px]">
+    <section className="md:relative hidden">
       <div className="container">
         <div className="flex justify-between items-center mt-[40px] bg-lghite">
           <div className="pl-[60px]">
-            <h1 className="max-w-[495px]  w-full font-bold text-[20px] md:text-[40px]">Калифорния <span className="text-primary">в подарок</span> при первом заказе</h1>
-            <p className="font-medium text-[15px] md:text-[20px] text-dark"><span>от 1500 ₽ </span></p>
+            <h1 className="max-w-[495px]  w-full font-bold text-[20px] md:text-[40px]">
+              Калифорния <span className="text-primary">в подарок</span> при
+              первом заказе
+            </h1>
+            <p className="font-medium text-[15px] md:text-[20px] text-dark">
+              <span>от 1500 ₽ </span>
+            </p>
           </div>
           <div className="pr-[60px] pb-[23px]">
-          <Image src={images.banner} alt="banner" />
+            <Image src={images.banner} alt="banner" />
           </div>
         </div>
         <div className="mt-[100px] flex items-center justify-between flex-wrap">
@@ -43,17 +48,19 @@ const Header = () => {
             <div className="flex items-center justify-center flex-col" key={i}>
               <Image src={card.img} alt="img" className="" />
               <div className="text-center">
-                <h3 className="font-bold text-[14px] leading-[18px] text-dark">{card.title}</h3>
+                <h3 className="font-bold text-[14px] leading-[18px] text-dark">
+                  {card.title}
+                </h3>
                 <p className="font-normal text-[14px] text-dark">{card.txt}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="relative z-[-1] bottom-[400px]">
-      <Image src={images.bgclock} alt='tree bg' className="  "/>
+      <div className="absolute bottom-0 left-0">
+        <Image src={images.bgclock} alt="tree bg" className="" />
       </div>
-    </header>
+    </section>
   );
 };
 

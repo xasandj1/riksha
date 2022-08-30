@@ -14,220 +14,232 @@ const cards = [
   },
   {
     img: images.sushi,
-    title: "Пицца",
+    title: "Суши",
   },
   {
     img: images.rolle,
-    title: "Пицца",
+    title: "Роллы",
   },
   {
     img: images.set,
-    title: "Пицца",
+    title: "Сеты",
   },
   {
     img: images.wok,
-    title: "Пицца",
+    title: "Wok",
   },
   {
     img: images.soup,
-    title: "Пицца",
+    title: "Супы",
   },
   {
     img: images.salat,
-    title: "Пицца",
+    title: "Салаты",
   },
   {
     img: images.desert,
-    title: "Пицца",
+    title: "Десерты",
   },
   {
     img: images.chay,
-    title: "Пицца",
+    title: "Напитки",
+  },
+  {
+    img: images.sale,
+    title: "Акции",
+  },
+];
+const links = [
+  {
+    title: "О нас",
+  },
+  {
+    title: "Доставка и оплата",
+  },
+  {
+    title: "Контакты",
+  },
+  {
+    title: "Бонусы",
+  },
+  {
+    title: "Бонусы",
   },
 ];
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive((prev) => !prev);
+    const imgs = document.querySelectorAll("img");
+    for (let i = 0; i < imgs.length; i++) {
+      const img = imgs[i];
+      active ? img.classList.remove("remove") : img.classList.add("remove");
+    }
+  };
+
   return (
-    <>
-      <header>
-        <nav>
-          <div className="container">
-            <div className="flex items-center justify-between py-[10px]">
-              <Image src={images.logo} alt="logo" className="z-[2]  md:max-w-[158px] w-full" />
-              <ul className="md:flex items-center justify-between hidden">
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark ml-[20px]"
-                  >
-                    О нас
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark ml-[40px]"
-                  >
-                    Доставка и оплата
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark ml-[40px]"
-                  >
-                    Контакты
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark ml-[40px]"
-                  >
-                    Бонусы
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark ml-[40px]"
-                  >
-                    Вакансии
-                  </a>
-                </li>
-                <div className="flex items-besline ml-[70px]">
-                  <FaPhoneAlt color="#E07153" fontSize={16} />
-                  <a
-                    href="tel:+7 (495) 617-14-24"
-                    className="flex flex-col font-medium text-[16px] text-dark ml-[10px] mb-[3px]"
-                  >
-                    +7 (495) 617-14-24{" "}
-                    <span className="flex items-end justify-end font-medium text-[12px] text-grey">
-                      {" "}
-                      c 10:00 до 23:00
-                    </span>
-                  </a>
-                </div>
-                <div className="bg-lghite pt-[16px] pl-[16px] pb-[15px] pr-[16px] flex items-center rounded-[6px] ml-[40px]">
-                <button className="font-medium text-[14px] text-dark border-r-2 border-white  pr-[16px] ">
-                  <span>0 ₽</span>
-                </button>
-                <button className="font-medium text-[20px] text-dark pl-[16px] ">
-                  <FaShoppingBag />
-                </button>
-              </div>
-              <div className="bg-lghite px-[16px] py-[16px] rounded-[6px] ml-[20px] flex justify-center items-center">
-                <button className="">
-                  <MdPersonAddAlt1 color="dark" fontSize={20} />
-                </button>
-              </div>
+    <header className="header">
+      <nav className="sticky top-0 left-0 w-full py-2">
+        <div className="container">
+          <div className="relative">
+            <Link href={"/"}>
+              <a className="absolute inset-y-auto left-0 hidden lg:block">
+                {/* */}
+                <Image
+                  src={images.logo}
+                  alt="logo"
+                  className="max-w-[100px] lg:max-w-[130px] w-full h-[100px] lg:min-h-[260px]"
+                />
+              </a>
+            </Link>
+            <div className="flex items-center justify-between md:justify-end py-2 lg:py-6 space-x-10 lg:space-x-20">
+              <Link href={"/"}>
+                <a className="lg:hidden block">
+                  {/* */}
+                  <Image
+                    src={images.logo}
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    className="logo"
+                  />
+                </a>
+              </Link>
+              <ul className="hidden md:flex items-center space-x-6 lg:space-x-12">
+                {links.map((card, i) => (
+                  <li className="" key={i}>
+                    <Link href={"/"}>
+                      <a className="font-regular text-dark text-[15px]">
+                        {card.title}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
-              <div className="flex items-center md:hidden  ">
-                  <FaPhoneAlt color="#E07153" fontSize={20} />
-                  <a
-                    href="tel:+7 (495) 617-14-24"
-                    className="flex flex-col font-medium text-[20px] text-dark ml-[10px] mb-[3px]"
-                  >
-                    +7 (495) 617-14-24{" "}
-                    <span className="flex items-end justify-end font-medium text-[15px] text-grey">
-                      {" "}
-                      c 10:00 до 23:00
-                    </span>
-                  </a>
+              <div className="flex items-center space-x-6 lg:space-x-14">
+                <div className="hidden xs:flex flex-col items-center sm:items-end justify-center">
+                  <Link href={"/"}>
+                    <a
+                      href="tel:+7 (495) 617-14-24"
+                      className="flex items-center space-x-2 font-medium text-base text-dark"
+                    >
+                      <FaPhoneAlt fontSize={14} color="#E07153" />
+                      <span>+998 88 033 00 70</span>
+                    </a>
+                  </Link>
+                  <span className="font-medium text-[12px] text-grey">
+                    c 10:00 до 23:00
+                  </span>
                 </div>
-              <div className="smallscreen md:hidden flex items-center justify-center">
-              <button
-                onClick={() => setActive((prev) => !prev)}
-                className="flex items-center justify-center bg-fiol py-[10px] px-[10px] rounded-[30px]"
-              >
-                <AiOutlineMenu fontSize={40} className="text-black" />
-              </button>
-              {active && (
-                <div className="fixed top-0 left-0 w-full h-full backdrop-blur-lg z-[100] flex items-center justify-center">
-                  <button
-                    onClick={() => setActive((prev) => !prev)}
-                    className="flex items-center justify-center absolute top-[70px] right-6"
-                  >
-                    <IoMdClose fontSize={40} className='' />
-                  </button>
-                  <ul className="flex items-center flex-col justify-center">
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark "
-                  >
-                    О нас
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark "
-                  >
-                    Доставка и оплата
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark "
-                  >
-                    Контакты
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark "
-                  >
-                    Бонусы
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href=""
-                    className="font-regular text-[14px] text-dark "
-                  >
-                    Вакансии
-                  </a>
-                </li>
-                
-                <div className="bg-lghite pt-[16px] pl-[16px] pb-[15px] pr-[16px] flex items-center rounded-[6px]">
-                <button className="font-medium text-[14px] text-dark border-r-2 border-white  pr-[16px] ">
-                  <span>0 ₽</span>
-                </button>
-                <button className="font-medium text-[20px] text-dark pl-[16px] ">
-                  <FaShoppingBag />
-                </button>
-              </div>
-              <div className="bg-lghite px-[16px] py-[16px] rounded-[6px] flex justify-center items-center">
-                <button className="">
-                  <MdPersonAddAlt1 color="dark" fontSize={20} />
-                </button>
-              </div>
-              </ul>
+                <div className="hidden sm:flex items-center space-x-6">
+                  <div className="flex items-center bg-lghite grey px-[16px] py-[16px] rounded-[6px] font-medium text-sm text-dark">
+                    <button className="flex items-center space-x-5">
+                      <span className="border-r-2 border-white pr-[16px]">
+                        0 ₽
+                      </span>
+                      <span className="relative">
+                        <FaShoppingBag color="dark" fontSize={24} />
+                        <span className="absolute top-[-10px] right-[-10px] bg-primary text-white rounded-full px-1">
+                          0
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                  <div className="flex items-center justify-center bg-lghite py-[16px] px-[16px] rounded-[6px]">
+                    <button>
+                      <MdPersonAddAlt1 fontSize={24} color="dark" />
+                    </button>
+                  </div>
                 </div>
-              )}
+              </div>
+              <div className="smallscreen md:hidden flex items-center">
+                <button className="flex items-center" onClick={handleClick}>
+                  <span>
+                    <AiOutlineMenu fontSize={30} className="text-dark " />
+                  </span>
+                </button>
+                {active && (
+                  <div className="fixed top-0 left-0 w-full h-[100vh] backdrop-blur-lg z-50 flex justify-center items-center ">
+                    <button
+                      className="absolute top-[6%] right-4 flex items-center"
+                      onClick={handleClick}
+                    >
+                      <span>
+                        <IoMdClose fontSize={30} className="text-dark " />
+                      </span>
+                    </button>
+                    <div className="flex flex-col items-center">
+                      <ul className="flex flex-col items-center">
+                        {links.map((card, i) => (
+                          <li className="" key={i}>
+                            <Link href={"/"}>
+                              <a className="font-bold text-dark text-lg py-1 block">
+                                {card.title}
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="sm:hidden flex flex-col items-center space-y-6">
+                        <div className="xs:hidden flex flex-col items-center justify-center mt-3">
+                          <Link href={"/"}>
+                            <a
+                              href="tel:+7 (495) 617-14-24"
+                              className="flex items-center space-x-2 font-medium text-base text-dark"
+                            >
+                              <FaPhoneAlt fontSize={14} color="#E07153" />
+                              <span>+998 88 033 00 70</span>
+                            </a>
+                          </Link>
+                          <span className="font-medium text-[12px] text-grey">
+                            c 10:00 до 23:00
+                          </span>
+                        </div>
+                        <div className="flex items-center space-x-6">
+                          <div className="flex items-center bg-lghite grey px-[16px] py-[16px] rounded-[6px] font-medium text-sm text-dark">
+                            <button className="flex items-center space-x-5">
+                              <span className="border-r-2 border-white pr-[16px]">
+                                0 ₽
+                              </span>
+                              <span className="relative">
+                                <FaShoppingBag color="dark" fontSize={24} />
+                                <span className="absolute top-[-10px] right-[-10px] bg-primary text-white rounded-full px-1">
+                                  0
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-center bg-lghite py-[16px] px-[16px] rounded-[6px]">
+                            <button>
+                              <MdPersonAddAlt1 fontSize={24} color="dark" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
+            <div className="flex items-center justify-end py-3">
+              <ul className="flex items-end space-x-10 sm:space-x-14 lg:space-x-16 overflow-x-scroll md:overflow-auto pb-2 md:pb-0">
+                {cards.map((card, i) => (
+                  <li className="flex items-center" key={i}>
+                    <Link href={"/"}>
+                      <a className="flex flex-col items-center font-medium text-dark text-base">
+                        <Image src={card.img} alt="img" className="" />
+                        <span className="mt-2 ">{card.title}</span>
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <div className="flex justify-center overflow-auto items-center bg-lghite relative top-[-10px] md:top-[-50px] pl-[10%]">
-            {cards.map((card, i) => (
-              <div className="mr-[60px] ml-[10px] py-[15px] flex flex-col items-center cursor-pointer" key={i}>
-                <Link href={"/"}>
-                  <a href="#!" className="cursor-pointer">
-                  <Image src={card.img} alt="img" className="rounded-[5px] cursor-pointer" />
-                  </a>
-                </Link>
-                <div className="">
-                  <h3 className="">{card.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </nav>
-      </header>
-    </>
+        </div>
+        <div className="absolute bottom-[18px] md:bottom-3 lg:bottom-0 left-0 h-1/3 lg:h-1/2 bg-lghite z-[-2] w-full" />
+      </nav>
+    </header>
   );
 };
 
