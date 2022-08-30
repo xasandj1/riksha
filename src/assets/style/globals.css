@@ -85,3 +85,8 @@ img.remove {
 display: flex !important;
 z-index: 1;
 }
+.bgbtn{
+ background: url(../img/bgbtn.svg)no-repeat center / cover;
+ height: 100%;
+ width: 100%;
+}

@@ -24,6 +24,9 @@ module.exports = {
         grey: "#B7B7B7",
         lghite: "#F5F5F5",
       },
+      backgroundImage:{
+        bgbtn:"url('/assets/img/bgbtn.svg')",
+      }
     },
   },
   plugins: [],

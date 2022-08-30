@@ -41,6 +41,9 @@ import wok from '../assets/img/wok.svg'
 import gives from '../assets/img/gives.svg'
 import bgclock from '../assets/img/bgclock.svg'
 import orange from '../assets/img/orange.svg'
+import footerlogo from '../assets/img/footerlogo.svg'
+import errorImg from '../assets/img/404.svg'
+import bgbtn from '../assets/img/bgbtn.svg'
 
 const images = {
 banner,
@@ -85,6 +88,9 @@ stickerroll,
 sushi,
 tree,
 wok,
-rolle
+rolle,
+footerlogo,
+errorImg,
+bgbtn
 }
 export default images
