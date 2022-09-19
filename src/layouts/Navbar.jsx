@@ -78,7 +78,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="header">
+    <header className="">
       <nav className="sticky top-0 left-0 w-full py-2">
         <div className="container">
           <div className="relative">
