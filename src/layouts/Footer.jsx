@@ -50,7 +50,7 @@ const Footer = () => {
                 <li className="" key={i}>
                   <Link href={"/"}>
                     <a className="">
-                      
+                      xaxaxaxa
                     </a>
                   </Link>
                 </li>
