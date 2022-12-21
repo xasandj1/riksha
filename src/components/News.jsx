@@ -73,7 +73,7 @@ const News = () => {
                 <span className="font-normal text-sm text-grey xr:mr-0 sm:mr-2 mr-2">{card.gram}</span>
                 <Image src={card.dots} alt="dots"/>
                 <span className="font-normal text-sm text-grey xr:ml-0 sm:ml-2 ml-2">{card.kall}</span>
-                <div className="flex items-center xr:ml-3 sm:ml-[76px] ml-[76px] mt-[2px]">
+                <div className="flex items-center xr:ml-3 sm:ml-[76px] xs:ml-[117px] sx:ml-[70px] ml-[76px] mt-[2px]">
                   <button className="bg-primary px-2 py-1 rounded-sm text-white font-semibold text-sm font-ttinter mr-1">{card.button}</button>
                   <Image src={card.dots} alt="dots"/>
                   <button className="bg-grey px-2 py-1 rounded-sm text-white font-semibold text-sm font-ttinter ml-1">{card.buttons}</button>
