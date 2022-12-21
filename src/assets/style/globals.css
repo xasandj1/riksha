@@ -47,7 +47,8 @@
 html,
 body {
   scroll-behavior: smooth;
-  background: #FCFCFC;
+  background: #FCFCFC !important;
+  font-family: "Ttinterface",sans-serif !important;
 }
 
 a:hover,
@@ -89,4 +90,7 @@ z-index: 1;
  background: url(../img/bgbtn.svg)no-repeat center / cover;
  height: 100%;
  width: 100%;
+}
+.btn{
+  background: #E07153;
 }

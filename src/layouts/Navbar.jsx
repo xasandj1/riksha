@@ -120,7 +120,7 @@ const Navbar = () => {
                 <div className="hidden xs:flex flex-col items-center sm:items-end justify-center">
                   <Link href={"/"}>
                     <a
-                      href="tel:+7 (495) 617-14-24"
+                      href="tel:+998 88 033 00 70"
                       className="flex items-center space-x-2 font-medium text-base text-dark"
                     >
                       <FaPhoneAlt fontSize={14} color="#E07153" />

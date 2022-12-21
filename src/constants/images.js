@@ -9,7 +9,6 @@ import comboroll from '../assets/img/comboroll.svg'
 import cutsushi from '../assets/img/cutsushi.png'
 import deliver from '../assets/img/deliver.svg'
 import desert from '../assets/img/desert.svg'
-import favicon from '../assets/img/favicon.svg'
 import fishikrasushi from '../assets/img/fishikrasushi.png'
 import fishsushi from '../assets/img/fishikrasushi.png'
 import free from '../assets/img/free.svg'
@@ -44,53 +43,64 @@ import orange from '../assets/img/orange.svg'
 import footerlogo from '../assets/img/footerlogo.svg'
 import errorImg from '../assets/img/404.svg'
 import bgbtn from '../assets/img/bgbtn.svg'
+import dots from '../assets/img/dots.png'
+import sets from '../assets/img/sets.svg'
+import tops from "../assets/img/tops.svg"
+import shadow from "../assets/img/shadow.svg"
+import topss from "../assets/img/topss.png"
+import hot from "../assets/img/hot.svg"
 
 const images = {
-banner,
-bg,
-orange,
-biffsushi,
-bluesushi,
-btn,
-chay,
-chilli,
-comboroll,
-cutsushi,
-deliver,
-desert,
-favicon,
-fishikrasushi,
-fishsushi,
-free,
-gives,
-fresh,
-hotsushi,
-logo,
-bgclock,
-lovesushi,
-parmapizza,
-pizza,
-pizzacolla,
-pover,
-redfishsushi,
-rikshapizza,
-rise,
-rollsushi,
-roseset,
-salat,
-sale,
-seesushi,
-set,
-seziriopizza,
-seziriosushi,
-soup,
-stickerroll,
-sushi,
-tree,
-wok,
-rolle,
-footerlogo,
-errorImg,
-bgbtn
+    banner,
+    bg,
+    orange,
+    biffsushi,
+    bluesushi,
+    btn,
+    chay,
+    chilli,
+    comboroll,
+    cutsushi,
+    deliver,
+    desert,
+    fishikrasushi,
+    fishsushi,
+    free,
+    gives,
+    fresh,
+    hotsushi,
+    logo,
+    bgclock,
+    lovesushi,
+    parmapizza,
+    pizza,
+    pizzacolla,
+    pover,
+    redfishsushi,
+    rikshapizza,
+    rise,
+    rollsushi,
+    roseset,
+    salat,
+    sale,
+    seesushi,
+    set,
+    seziriopizza,
+    seziriosushi,
+    soup,
+    stickerroll,
+    sushi,
+    tree,
+    wok,
+    rolle,
+    footerlogo,
+    errorImg,
+    bgbtn,
+    dots,
+    sets,
+    tops,
+    shadow,
+    topss,
+    hot
 }
 export default images

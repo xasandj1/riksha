@@ -1,3 +1,5 @@
 export {default as Header} from './Header.jsx'
 export {default as News} from './News.jsx'
 export {default as Button} from './Button.jsx'
+export {default as Submitbtn} from './Submitbtn'
+export {default as Combo} from './Combo'

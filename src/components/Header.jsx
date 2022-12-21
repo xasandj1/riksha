@@ -38,7 +38,7 @@ const Header = () => {
             <p className="font-medium text-[10px] sm:text-[15px] md:text-[20px] text-dark">
               <span>от 1500 ₽ </span>
             </p>
-            <button className="bg-primary px-[10px] py-[25px]  sm:px-[20px] sm:py-[40px] md:px-[30px] md:py-[60px] xl:px-[40px] xl:py-[75px]  mt-6 rounded-[50%] font-regular sm:font-bold text-white text-[10px] sm:text-lg">Подробнее</button>
+            <button className="bg-primary px-[10px] py-[25px]  sm:px-[20px] sm:py-[45px] md:px-[30px] md:py-[60px] xl:px-[40px] xl:py-[75px]  mt-6 rounded-[50%] font-regular sm:font-bold text-white text-[10px] sm:text-lg">Подробнее</button>
           </div>
           <div className="pr-[10px] sm:pr-[60px] sm:pb-[23px]">
             <Image src={images.banner} alt="banner" />
@@ -48,8 +48,8 @@ const Header = () => {
       </div>
         <div className="sx:mt-[10px] xs:mt-[20px] sm:mt-[50px] lg:mt-[70px] xl:mt-[100px] flex items-center xl:items-center justify-center xl:justify-between flex-wrap">
           {cards.map((card, i) => (
-            <div className="flex items-center justify-center flex-col" key={i}>
-              <Image src={card.img} alt="img" className="" />
+            <div className="flex items-center justify-center flex-col sm:max-w-[210px] sm:w-full xr:max-w-[150px] xr:w-full max-w-[210px] w-full" key={i}>
+              <Image src={card.img} alt="img" className=""/>
               <div className="text-center">
                 <h3 className="font-bold text-[14px] leading-[18px] text-dark">
                   {card.title}
