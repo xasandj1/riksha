@@ -65,7 +65,7 @@ const News = () => {
           </div>
           <div className="sm:mt-7 xr:mt-2 mt-10 flex items-center justify-center flex-wrap ">    
           {cards.map((card,i)=>(
-            <div key={i} className="rounded-[20px] relative bg-white max-w-[392px] w-full sm:px-5 sm:py-5 xr:px-2 xr:py-2 px-5 py-5 xr:mx-0 mx-3 sx:mb-3 sm:mb-4 mb-0">
+            <div key={i} className="rounded-[20px] relative bg-white max-w-[392px] w-full sm:px-5 sm:py-5 xr:px-2 xr:py-2 px-5 py-5 sm:mx-3 xr:mx-0 mx-3 sm:my-3 sx:mb-3 sm:mb-4 mb-0">
              <Image src={card.img} alt=""/>
              <div className="flex items-end justify-end flex-col">
               <span className="text-grey text-xs font-semibold">{card.span}</span>
