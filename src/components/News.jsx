@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { images } from "../constants";
+import Button from "./Button";
+import Submitbtn from "./Submitbtn";
 
 const cards = [
   {
@@ -86,19 +88,15 @@ const News = () => {
                     <div className="flex items-center justify-between mt-10">
                       <h2 className="font-bold font-ttinter text-3xl text-dark">{card.price}</h2>
 
-                      <div className='relative max-w-[180px] w-full '>
-                        <button className='bg-primary w-full h-[44px] rounded-sm btn text-white relative font-bold text-sm font-ttinter'><span className='relative z-[1]'>Заказать</span></button>
-                         <div className='absolute top-0 left-0'>
-                           <Image src={images.shadow} alt="shadow" className=''/>
-                          </div>
+                      <div className=' max-w-[180px] w-full '>
+                        <Button className='bg-primary w-full h-[44px] rounded-sm btn text-white font-bold text-sm font-ttinter'><span className='text-white font-bold text-sm'>Заказать</span></Button>
                        </div>
                     </div>
                   </div>
-                
-              <div className="absolute  top-5 left-2">
+              <div className="absolute flex lg:flex xr:hidden top-5 left-2 ">
                 <Image src={card.sets} alt="sets"/>
               </div>
-              <div className="absolute top-0 sm:right-[-5%] xr:right-0 right-[-5%]">
+              <div className="absolute flex lg:flex xr:hidden top-0 sm:right-[-5%] xr:right-0 right-[-5%]">
                 <Image src={card.tops} alt="tops"/>
               </div>
             </div>

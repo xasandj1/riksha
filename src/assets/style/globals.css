@@ -94,3 +94,9 @@ z-index: 1;
 .btn{
   background: #E07153;
 }
+.tech{
+  display: none;
+}
+.active{
+ display: flex;
+}
