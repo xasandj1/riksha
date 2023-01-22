@@ -56,12 +56,12 @@ const News = () => {
     <section className="sm:mt-[40px] xr:mt-[20px] mt-[40px] sm:mb-[70px] xr:mb-[30px] mb-[100px]">
       <div className="container">
         <div className="py-[24px]">
-          <div className="flex items-baseline xr:items-center flex-wrap">
+          <div className="flex md:items-baseline xr:items-center flex-wrap">
             <Image src={images.stickerroll} alt="stickroll" />
             <h1 className="font-semibold xr:text-[30px] text-[48px] text-dark sm:text-[48px] xr:ml-1  ml-[15px]">
               Топ позиции
             </h1>
-            <h2 className="font-medium xr:text-[30px] sm:text-[48px] text-[48px] xr:ml-2 ml-[32px] text-grey">
+            <h2 className="font-medium xr:text-[30px] sm:text-[48px] text-[48px] sm:ml-5 xr:ml-2 ml-[32px] text-grey">
               <span>Новинки</span>
             </h2>
           </div>
