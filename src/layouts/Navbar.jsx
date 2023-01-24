@@ -78,13 +78,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="">
-      <nav className="sticky top-0 left-0 w-full py-2">
+    <header>
+      <nav className="sticky top-0 left-0 w-full">
         <div className="container">
           <div className="relative">
             <Link href={"/"}>
               <a className="absolute inset-y-auto left-0 hidden lg:block">
-                {/* */}
                 <Image
                   src={images.logo}
                   alt="logo"
